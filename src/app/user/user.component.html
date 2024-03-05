@@ -1,0 +1,17 @@
+<section>
+    @if (isLoggedIn) {
+    <h1>Bienvenido, {{username}} </h1>
+    <img (click)="greet()" src="https://github.com/RodLopz.png" alt="photo">
+    <p>Puedes clicar en la foto de perfil para mostrar un mensaje del bicho</p>
+        <p>Seguidores: 200M       Siguiendo: 50       Equipos: 5</p>
+    <app-games (addFavoriteEvent)="getFavGame($event)" username="{{username}}"></app-games>
+
+    @if (favGame != '') {
+    <p>El equipo favorito de CR7 es: {{favGame}}</p>
+    }
+    }
+    @else {
+    <p>¡Haga clic para iniciar sesión!</p>
+    <button (click)="isLoggedIn = true" class="boton-guapisimo">Login</button>
+    }
+</section>

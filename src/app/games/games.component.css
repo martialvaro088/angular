@@ -1,0 +1,11 @@
+section{
+    background-color: darkred;
+    margin: 20px;
+    border-radius: 12px;
+    height: 50%;
+}
+
+div{
+    margin: 5px;
+    height: 50%;
+}

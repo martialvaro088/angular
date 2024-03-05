@@ -1,0 +1,13 @@
+<section>
+    <div>
+        <p>Hola fan de {{this.username}}</p>
+        <h1>Equipos del bicho</h1>
+        <ul>
+            @for (game of games; track game.id){
+            <li (click)="fav(game.name)">
+                {{game.name}}
+            </li>
+            }
+        </ul>
+    </div>
+</section>
